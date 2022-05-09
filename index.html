@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript" src="add.js"></script>
+    <button id="clicker">
+    <script type="text/javascript">
+      let output = addnumbers(90, 100);
+      //alert(output);
+      console.log(output);
+
+      function Bike(gears, currentgear){
+        this.gears = gears;
+        this.currentgear = currentgear;
+      }
+
+      Bike.prototype.changegear = function (direction, changeby) {
+        if(direction === 'up'){
+          this.currentgear += changeby;
+        }else {
+          this.currentgear -= changeby;
+        }
+      };
+
+      const bike = new Bike(10,3);
+      console.log(bike.gears);
+      console.log(bike.currentgear);
+      bike.changegear('up',1);
+      console.log(bike.currentgear);
+
+      let counter=0;
+      increaseCount();
+
+      console.log(counter);
+      let button = document.getElementById("clicker");
+      button.addEventListener("click", handleClick);
+
+      function handleClick(){
+        alert('Hello');
+      }
+    </script>
+  </body>
+</html>
